@@ -33,7 +33,6 @@ jobs:
       - name: Download Stream (with Auto-Timeout)
         run: |
           timeout --signal=SIGINT 340m yt-dlp \
-            --cookies cookies.txt \
             --wait-for-video 60 \
             --downloader m3u8:native \
             -f "bestvideo+bestaudio/best" \
